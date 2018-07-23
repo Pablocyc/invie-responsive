@@ -9,36 +9,37 @@
   </head>
 
   <body>
-    <header id="header" class="header contenedor"> <!-- header -->
-      <!-- logotipo -->
-      <figure class="logotipo">
-        <img src="images/invie_logo.png" width="186" height="60" alt="Invie logotipo" />
-      </figure>
+    
+    <section id="portada" class="portada background"> <!-- portada -->
+      <header id="header" class="header contenedor"> <!-- header -->
+        <!-- logotipo -->
+        <figure class="logotipo">
+          <img src="images/invie_logo.png" width="186" height="60" alt="Invie logotipo" />
+        </figure>
+  
+        <!-- menu -->
+        <nav class="menu">
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>                  
+            <li>
+              <a href="#guitarras">Guitarras</a>
+            </li>                                   
+            <li>
+              <a href="precios.html">Precios</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
 
-      <!-- menu -->
-      <nav class="menu">
-        <ul>
-          <li>
-            <a href="index.html">Home</a>
-          </li>                  
-          <li>
-            <a href="#guitarras">Guitarras</a>
-          </li>                                   
-          <li>
-            <a href="precios.html">Precios</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <section id="portada" class="portada"> <!-- portada -->
       <div class="contenedor">
         <!-- titulo -->
-        <h1 class="titulo">Guitarras inviesibles</h1>
+        <h1 class="titulo">Guitarras <span>invie</span>sibles</h1>
         <!-- resumen -->
         <h3 class="title-a">Sé la estrella de rock que siempre quisiste ser</h3>
         <!-- boton -->
-        <button class="button">Conoce más</button>
+        <a class="button" href="#guitarras">Conoce más</a>
       </div>
     </section>
     
@@ -58,7 +59,7 @@
         </div>
       </article>
       <!-- guitarra 2 -->
-        <article class="guitarra">
+        <article class="guitarra b">
           <img class="left" src="images/invie-classic.png" alt="Guitarra classic" width="350" />
           <div class="contenedor-guitarra-b">
             <h3 class="title-b">Invie Classic</h3>
