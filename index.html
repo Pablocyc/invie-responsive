@@ -133,16 +133,31 @@
       </div>
     </footer>
 
-    <script>
+    <script>     
+      var consulta = window.matchMedia('(max-width: 800px');
+      consulta.addListener(mediaQuery);
+
+      function mediaQuery() {
+        if(consulta.matches) {
+          // si se cumple hacemos esto
+          console.log('se cumplio la condicion');
+          $buttonMenu.addEventListener('touchstart', toogleMenu);          
+        } else {
+          $buttonMenu.removeEventListener('touchstart', toogleMenu);          
+          console.log('no se complio la condicion');
+        }
+      }
+
       var $buttonMenu = document.getElementById('button-menu');
       var $menu = document.getElementById('menu');
-      // $buttonMenu.addEventListener(que evento, que queremos hacer)
-      
-      $buttonMenu.addEventListener('touchstart', toogleMenu);
+
+      // $buttonMenu.addEventListener(que evento, que queremos hacer)      
+      // $buttonMenu.addEventListener('touchstart', toogleMenu);
 
       function toogleMenu() {
         $menu.classList.toggle('active')
       }
+      mediaQuery();
     </script>
     
   </body>
