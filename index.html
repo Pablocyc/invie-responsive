@@ -7,6 +7,7 @@
     <!-- <link rel="stylesheet" media="(max-width: 800px)" href="css/media-querie.css"> -->
     <title>Invie - tus mejores guitarras!!</title>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   </head>
 
   <body>
@@ -137,9 +138,11 @@
       var $menu = document.getElementById('menu');
       // $buttonMenu.addEventListener(que evento, que queremos hacer)
       
-      $buttonMenu.addEventListener('touchstart', function() {
+      $buttonMenu.addEventListener('touchstart', toogleMenu);
+
+      function toogleMenu() {
         $menu.classList.toggle('active')
-      })
+      }
     </script>
     
   </body>
