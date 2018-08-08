@@ -305,11 +305,23 @@ input:focus, textarea:focus {
   display: inline-block;
   text-align: center;
   cursor: pointer;
-  position: absolute;
+  position: fixed;
   left: 20px;
   top: 20px;
   color: white;
   z-index: 3;
+  display: none;
+}
+
+.video-demo {
+  max-width: 500;
+  width: 100%;
+  border: 5px solid #3c5b6e;
+}
+.video-demo-contenedor {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
 }
 
 @media screen and (max-width: 800px) {
@@ -342,6 +354,9 @@ input:focus, textarea:focus {
   /* portada */
 
   /* guitarras */
+  .video-demo-contenedor {
+    margin-bottom: 30px;
+  }
   .guitarras {    
     text-align: center;
   }
@@ -420,12 +435,23 @@ input:focus, textarea:focus {
   .menu ul {
     padding: 0;
   }
+  /* .guitarras */
+  /* .video-demo {
+    margin: 0 10px;
+  } */
 }
 
 @media screen and (max-width: 500px) {
   /* portada */
-  .logotipo {
-    margin: 5px;
+  .portada .button {
+    display: block;
+  }
+  
+  .button-menu {
+    display: block;
+  }
+  .precios .header .logotipo {
+    margin: 30px;
   }
   .portada .contenedor {
     position: static;
@@ -438,7 +464,7 @@ input:focus, textarea:focus {
   }
   .menu {
     background: rgba(255, 60, 88, .8);
-    position: absolute;
+    position: fixed;
     left: -100%;
     top: 0;
     bottom: 0;
@@ -485,6 +511,13 @@ input:focus, textarea:focus {
   }
   .title-b {
     font-size: 30px;
+  }
+  .video-demo-contenedor {
+    margin: 0 10px 30px 10px;
+  }
+  /* footer */
+  .col2 {
+    align-items: stretch;
   }
 }
 

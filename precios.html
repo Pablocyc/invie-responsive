@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
    </head>
 
-  <body>
+  <body class="precios">
     <header id="header" class="header background"> <!-- header -->
       <div class="contenedor">
         <!-- logotipo -->
@@ -135,6 +135,7 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script> 
     <script>     
       var consulta = window.matchMedia('(max-width: 800px');
       consulta.addListener(mediaQuery);
@@ -143,9 +144,9 @@
         if(consulta.matches) {
           // si se cumple hacemos esto
           console.log('se cumplio la condicion');
-          $buttonMenu.addEventListener('touchstart', toogleMenu);          
+          $buttonMenu.addEventListener('touchstart', toggleMenu);          
         } else {
-          $buttonMenu.removeEventListener('touchstart', toogleMenu);          
+          $buttonMenu.removeEventListener('touchstart', toggleMenu);          
           console.log('no se complio la condicion');
         }
       }
@@ -156,8 +157,14 @@
       // $buttonMenu.addEventListener(que evento, que queremos hacer)      
       // $buttonMenu.addEventListener('touchstart', toogleMenu);
 
-      function toogleMenu() {
-        $menu.classList.toggle('active')
+      function toggleMenu() {
+        $menu.classList.toggle('active');
+      }
+      function showMenu() {
+        $menu.classList.add('active');
+      }
+      function hideMenu() {
+        $menu.classList.remove('active');
       }
       
       // lazy loading
@@ -166,6 +173,13 @@
         selector: 'img'
       });
       mediaQuery();
+
+      // Gestos touch
+      var $body = document.body;
+
+      var gestos = new Hammer($body);
+      gestos.on('swipeleft', hideMenu);
+      gestos.on('swiperight', showMenu);
     </script>
   </body>
 </html>
