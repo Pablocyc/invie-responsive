@@ -424,6 +424,9 @@ input:focus, textarea:focus {
 
 @media screen and (max-width: 500px) {
   /* portada */
+  .logotipo {
+    margin: 5px;
+  }
   .portada .contenedor {
     position: static;
   }
